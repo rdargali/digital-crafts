@@ -1,0 +1,35 @@
+body {
+  background-image: url("https://ak1.picdn.net/shutterstock/videos/1016011171/thumb/1.jpg");
+}
+
+img {
+  width: 300px;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px;
+  color: whitesmoke;
+  font-weight: bold;
+  background-color: #3bffdb;
+}
+a:link,
+a:visited {
+  color: white;
+}
+
+.nav {
+  padding: 15px;
+  background-color: #3bffdb;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.container {
+  text-align: center;
+}
