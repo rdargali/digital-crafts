@@ -1,0 +1,107 @@
+body {
+  background-color: black;
+}
+
+.red-first-row,
+.red-second-row {
+  display: inline-flex;
+}
+
+.red-first-row-block,
+.red-second-row-block {
+  background-color: red;
+  border: 2px, solid, black;
+  margin: 1px;
+  width: 110px;
+  height: 30px;
+}
+
+.yellow-first-row,
+.yellow-second-row {
+  display: inline-flex;
+}
+
+.yellow-first-row-block,
+.yellow-second-row-block {
+  background-color: yellow;
+  border: 2px, solid, black;
+  margin: 1px;
+  width: 110px;
+  height: 30px;
+}
+
+.green-first-row,
+.green-second-row {
+  display: inline-flex;
+}
+
+.green-first-row-block,
+.green-second-row-block {
+  background-color: green;
+  border: 2px, solid, black;
+  margin: 1px;
+  width: 110px;
+  height: 30px;
+}
+
+.blue-first-row,
+.blue-second-row {
+  display: inline-flex;
+}
+
+.blue-first-row-block,
+.blue-second-row-block {
+  background-color: blue;
+  border: 2px, solid, black;
+  margin: 1px;
+  width: 110px;
+  height: 30px;
+}
+
+.black-container {
+  background-color: black;
+  border: 2px, solid, black;
+  margin: 1px;
+  width: 110px;
+  height: 30px;
+}
+.black {
+  background-color: black;
+  margin: 1px;
+  width: 110px;
+  height: 30px;
+  position: relative;
+}
+#first-ball {
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+#second-ball {
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+}
+
+#third-ball {
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50px;
+}
+
+.player-bar {
+  background-color: gray;
+  width: 200px;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+}

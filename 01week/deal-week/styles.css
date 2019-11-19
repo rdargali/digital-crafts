@@ -1,0 +1,17 @@
+.class {
+  position: relative;
+}
+
+.deal {
+  position: absolute;
+  top: 230;
+  left: 0;
+  display: inline-block;
+  z-index: 1;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
