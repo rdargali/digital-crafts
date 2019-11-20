@@ -1,0 +1,45 @@
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    background-color: lightgray;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gadget-images {
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+  }
+}
+
+#container {
+  display: flexbox;
+  flex-direction: column;
+}
+
+header {
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+header div {
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.gadget-images {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.gadget-images div {
+  display: flex;
+  flex-direction: column;
+}
