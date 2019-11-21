@@ -1,0 +1,47 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.wrapper div {
+  padding: 30px;
+}
+
+.one {
+  background-color: yellow;
+  grid-column: 1/3;
+}
+
+.two {
+  background-color: blue;
+  grid-column: 3/5;
+}
+
+.three {
+  background-color: green;
+}
+
+.four {
+  background-color: red;
+}
+
+.five {
+  background-color: pink;
+}
+
+.six {
+  background-color: white;
+  border: 1px solid black;
+  grid-column: 4/5;
+  grid-row: 2/4;
+}
+
+.seven {
+  background-color: purple;
+}
+
+.eight {
+  background-color: grey;
+  grid-column: 2/4;
+}
