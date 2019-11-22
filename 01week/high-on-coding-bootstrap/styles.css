@@ -1,0 +1,21 @@
+.body-container {
+  margin: 20px;
+  margin-left: 60px;
+}
+
+.curse {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 35px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.curse p {
+  font-family: unset;
+}
+
+.articles {
+  width: 1000px;
+  margin-left: 10px;
+}
