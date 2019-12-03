@@ -1,0 +1,12 @@
+#textbox {
+  width: 200px;
+}
+
+#movieUL {
+  display: flex;
+  flex-direction: column;
+}
+
+#movieUL li {
+  display: grid;
+}
