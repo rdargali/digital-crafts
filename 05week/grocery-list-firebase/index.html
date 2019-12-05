@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Firebase Grocery List</title>
+    <link rel="stylesheet" href="styles.css" class="style" />
+  </head>
+  <body>
+    <h2>Grocery List</h2>
+    <input type="text" placeholder="Enter item" id="groceryListTextBox" />
+    <input type="text" placeholder="Enter category" id="categoryTextBox" />
+    <button id="addButton">Add to list</button>
+    <div id="container">
+      <div>
+        <b>Category</b>
+        <ul id="itemUL"></ul>
+      </div>
+      <div>
+        <b>Item</b>
+        <ul id="categoryUL"></ul>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+    <!-- Firebase Realtime Database Library -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBZgeOdapH5JQ03ZGR6j-sk6XjkZlzkAOo",
+        authDomain: "grocery-list-7dfdd.firebaseapp.com",
+        databaseURL: "https://grocery-list-7dfdd.firebaseio.com",
+        projectId: "grocery-list-7dfdd",
+        storageBucket: "grocery-list-7dfdd.appspot.com",
+        messagingSenderId: "74601528478",
+        appId: "1:74601528478:web:2306336e634f6c9ad90f8f",
+        measurementId: "G-QHLDH2BYR0"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
