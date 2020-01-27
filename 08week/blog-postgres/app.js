@@ -1,14 +1,18 @@
+//ex[ress]
 const express = require("express");
 const app = express();
+
+//mustache
 const mustacheExpress = require("mustache-express");
-
-app.use(express.urlencoded());
-
-// Register '.mustache' extension with The Mustache Express
 app.engine("mustache", mustacheExpress());
-
 app.set("view engine", "mustache");
 app.set("views", "./views");
+
+//bcrypt
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
+
+app.use(express.urlencoded());
 
 // connect to the postgreSQL database
 var pgp = require("pg-promise")();

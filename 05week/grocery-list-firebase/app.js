@@ -34,11 +34,13 @@ addButton.addEventListener("click", () => {
 //Displaying items on UI
 function updateUI() {
   let items = groceryList.map(post => {
-    return `<li>${post.item}</li>`;
+    return `<li><label>${post.item}</label</li>
+            `;
   });
 
   let categories = groceryList.map(post => {
-    return `<li>${post.category}</li>`;
+    return `<li><label>${post.category}</label</li>
+    <button>Remove</button>`;
   });
 
   itemUL.innerHTML = items.join(" ");

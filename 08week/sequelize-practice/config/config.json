@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "wibolyty",
+    "password": "KnqhL6Fu9eJr3g7U6Ci2p3wJy9m0aRhd",
+    "database": "wibolyty",
+    "host": "rajje.db.elephantsql.com",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}

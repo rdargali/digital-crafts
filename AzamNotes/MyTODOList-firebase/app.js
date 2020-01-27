@@ -1,97 +1,76 @@
+
 // Get a reference to the database service
 let database = firebase.database();
-let root = database.ref();
+let shoppingListsRef = database.ref("shoppinglists")
 
-// create a post node under child
-let postsRef = root.child("posts");
 
-let postTitleTextBox = document.getElementById("postTitleTextBox");
-let postBodyTextBox = document.getElementById("postBodyTextBox");
-let postListUL = document.getElementById("postListUL");
+let shoppingListNameTextBox = document.getElementById("shoppingListNameTextBox")
+let saveShoppingListButton = document.getElementById("saveShoppingListButton")
+let shoppingListUL = document.getElementById("shoppingListUL")
 
-function displayPosts(posts) {
-  let postItems = posts.map(post => {
-    return `<li>${post.title}</li>`;
-  });
-
-  postListUL.innerHTML = postItems.join("");
-}
 
 function setupObservers() {
-  postsRef.on("child_added", snapshot => {
-    //console.log(snapshot.key)
-    //console.log(snapshot.val())
 
-    let post = { key: snapshot.key, ...snapshot.val() };
-    console.log(post);
+    shoppingListsRef.on('value',(snapshot) => {
 
-    // without spread operator
-    // let post = {key: snapshot.key, title: snapshot.val().title, body: snapshot.val().body}
-  });
-
-  /*
-    postsRef.on('value',(snapshot) => {
-
-        let posts = [] 
+        let shoppingLists = [] 
 
         let snapshotValue = snapshot.val() 
 
         for(let key in snapshotValue) {
-            console.log(key)
-            let post = snapshotValue[key]
-            posts.push(post)
+            let shoppingList = snapshotValue[key] 
+            shoppingList.shoppingListId = key
+            shoppingLists.push(shoppingList)
         }
 
-        console.log(posts)
-        displayPosts(posts) 
+        updateUI(shoppingLists) 
 
-    }) */
+    })
+
 }
 
-let savePostButton = document.getElementById("savePostButton");
-savePostButton.addEventListener("click", () => {
-  let title = postTitleTextBox.value;
-  let body = postBodyTextBox.value;
+function deleteShoppingList(shoppingListId) {
 
-  // save the post and creates a unique ID for the NODE
-  postsRef.push({
-    title: title,
-    body: body
-  });
-});
+    shoppingListsRef.child(shoppingListId).remove()
 
-setupObservers();
+    // event.target.previousElementSibling.previousElementSibling will be the hidden element 
 
-let usersRef = root.child("users");
+    console.log(shoppingListId)
+}
 
-// push creates a unique id for the node name
-usersRef.push({
-  name: "Alex",
-  age: 44
-});
+function updateUI(shoppingLists) {
 
-usersRef.child("Alex").set({
-  name: "Alex",
-  age: 23
-});
+    let shoppingListItems = shoppingLists.map((shoppingList) => {
+        return `<li>
+            <input type='hidden' value='${shoppingList.shoppingListId}'></input>
+            <label>${shoppingList.title}</label>
+            <button onclick='deleteShoppingList("${shoppingList.shoppingListId}")'>Remove</button>
+        </li>`
+    })
 
-usersRef.child("Alex").set({
-  name: "Alex",
-  age: 25
-});
+    shoppingListUL.innerHTML = shoppingListItems.join('')
 
-//    Root
-//       - users
-//             - Alex
-//                  - name = alex
-//                  - age = 23
+}
 
-root.child("Task 1").set({
-  title: "Wash car",
-  priority: "high"
-});
 
-root.child("Task 2").set({
-  title: "Feed dog",
-  priority: "medium"
-});
+saveShoppingListButton.addEventListener('click',() => {
+
+    let shoppingListName = shoppingListNameTextBox.value
+    shoppingListsRef.push({
+       title: shoppingListName
+    })
+})
+
+/*
+   root 
+     - shoppinglists 
+               - 848484884
+                    - title 
+*/
+
+
+setupObservers() 
+
+
+
+
