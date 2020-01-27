@@ -1,0 +1,16 @@
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.counterButton {
+    height: 30px;
+    width: 30px;
+    background-color: green;
+    color: white;
+    font-size: large;
+    font-style: bold;
+   
+}
