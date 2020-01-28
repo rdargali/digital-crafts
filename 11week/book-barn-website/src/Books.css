@@ -1,0 +1,25 @@
+#booksDisplay{
+    display: flex
+}
+
+.booksUL {
+    border-right: black 2px;
+    width: 300px;
+    display: inline-block
+}
+
+.booksUL li{
+    
+}
+
+#scrollMenu {
+    white-space: nowrap;
+    overflow: auto;
+    width: 60%;
+    height: 30rem;
+   
+  }
+
+  img {
+      width: 60%;
+  }

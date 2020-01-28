@@ -1,0 +1,23 @@
+#header{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(238, 238, 190);
+    height: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+#icon{
+    background-color: rgb(187, 187, 20);
+    padding: 8px;
+    border-radius: 3px;
+    font-size: 20px;
+    color: white;
+}
+
+#searchBox{
+    height: 20px;
+    width: 150px;
+}
+
