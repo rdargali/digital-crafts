@@ -12,7 +12,6 @@ constructor(props){
   super(props) 
     this.state = {
       toDo: "",
-      completed: false,
       toDoList: []
     }
   }
@@ -20,7 +19,7 @@ constructor(props){
   handleChange = (e) => {
     this.setState({
         toDo: e.target.value,
-        completed: false
+        
         
     })
 }
