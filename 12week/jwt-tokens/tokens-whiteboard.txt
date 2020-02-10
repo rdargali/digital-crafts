@@ -1,0 +1,14 @@
+1. Client posts log in to server
+
+2. Server authenticates user and password
+
+3. If authentication is success, server generates a token and sends it back 
+to Client
+
+4. Client saves the token in local storage
+
+5. On future requests that require authentication, the client should always
+pass token in the header to the server
+
+6. Server verifies the token to make sure it's correct and not tampered with. 
+If verified successfully then the server returns a response

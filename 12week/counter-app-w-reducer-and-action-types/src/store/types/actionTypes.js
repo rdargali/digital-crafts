@@ -1,0 +1,6 @@
+export const INCREMENT_COUNTER = "INCREMENT_COUNTER";
+export const DECREMENT_COUNTER = "DECREMENT_COUNTER";
+export const DOUBLE_COUNTER = "DOUBLE_COUNTER";
+export const HALF_COUNTER = "HALF_COUNTER";
+
+export const ADD_TO_DO = "ADD_TO_DO";
